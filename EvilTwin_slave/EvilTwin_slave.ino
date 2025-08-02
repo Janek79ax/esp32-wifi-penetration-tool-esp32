@@ -5,8 +5,6 @@ This code is for the Slave - ESP32. Features:
  - answer for I2C asks if user already provided a password to verify
  - accept info from RTL that password is OK - then stop Evil Twin
 
-ESP's SDA (21) is connected to RTL PA26
-ESP's SCL (22) is connected to RTL PA25
 
 */
 
@@ -215,9 +213,9 @@ void setup() {
   display.setTextSize(1);
   display.setTextColor(SSD1306_WHITE);
   display.setCursor(0, 0);
-  display.println("Connect to: ROUTER");
-  display.println("Password: eviltwin");  //hardcoded data from master
-  display.println("Visit: 192.168.1.1");
+  display.println("Connect to: Livebox");
+  display.println("Password: mgmtadmin");  //hardcoded data from master
+  display.println("Visit: 192.168.4.1");
   display.display();
   delay(100);
 
